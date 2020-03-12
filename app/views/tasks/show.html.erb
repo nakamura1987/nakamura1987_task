@@ -11,6 +11,6 @@
   <%= @task.body %>
 </p>
 
-<%= link_to '編集', edit_task_path(@task) %>
+<%= link_to '編集', edit_task_path(@task), type: "submit" %>
 <%= link_to '削除', task_path, method: :delete %>
 <%= link_to '戻る', tasks_path %>
