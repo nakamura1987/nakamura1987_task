@@ -14,9 +14,9 @@ class TasksController < ApplicationController
   end
 
   # GET /tasks/new
-  def new
-    @task = Task.new
-  end
+  # def new
+  #   @task = Task.new
+  # end
 
   # GET /tasks/1/edit
   def edit
@@ -44,7 +44,7 @@ class TasksController < ApplicationController
   def update
     respond_to do |format|
       if @task.update(task_params)
-        format.html { redirect_to @task, notice: 'Task was successfully updated.' }
+        format.html { redirect_to tasks_path, notice: 'Task was successfully updated.' }
         format.json { render :show, status: :ok, location: @task }
       else
         format.html { render :edit }
