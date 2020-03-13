@@ -1,0 +1,15 @@
+
+<h1>タスク詳細</h1>
+<p>
+  <strong>【タイトル】</strong><br>
+  <%= @task.title %>
+</p>
+
+<p>
+  <strong>【内容】</strong><br>
+  <%= @task.body %>
+</p>
+
+<%= link_to '編集', edit_task_path(@task), type: "submit" %>
+<%= link_to '削除', task_path, method: :delete %>
+<%= link_to '戻る', tasks_path %>

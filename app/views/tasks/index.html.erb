@@ -1,0 +1,20 @@
+
+<h1>タスク一覧</h1>
+
+<table>
+  <tbody>
+  <ul>
+    <% @tasks.each do |task| %>
+      <tr>
+        <td><li><b><%= link_to task.title, task %></b>|</li></td>
+        <td><b><%= link_to '削除', task, method: :delete %></b></td>
+        <%# <td colspan="3"></td> %>
+      </tr>
+    <% end %>
+  </ul>
+  </tbody>
+</table>
+<hr>
+<h2>タスク登録</h2>
+<%= render 'form', task: @task %>
+
